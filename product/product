@@ -1,1 +1,14 @@
 
+
+import "./app.css";
+import Pproduct from "./Pproduct.jsx";
+function App() {
+  return (
+  <>
+ <Pproduct/>
+  </>
+   
+  ) ;
+}
+
+export default App;
