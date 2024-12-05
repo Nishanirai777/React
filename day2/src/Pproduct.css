@@ -1,4 +1,6 @@
 .Pproduct{
-    border: 2px solid red;
-    border-radius: 50%;
+   border: 2px solid blue;
+    border-radius: 15px;
+    margin-bottom: 5px;
+    padding: 5px;
 }
