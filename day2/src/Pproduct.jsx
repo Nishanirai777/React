@@ -1,9 +1,9 @@
 import "./Pproduct.css";
-function Pproduct (){
+function Pproduct ( {title ,price }){
 return(
  <div className="Pproduct">
-    <h1>i amm Title</h1>
-    <h5>i am description</h5>
+    <h1>{title}</h1>
+    <h5> price : {price}</h5>
  </div>
 );
 }
