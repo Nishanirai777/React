@@ -5,7 +5,9 @@ function Pproduct ( {title ,price ,features }){
  <div className="Pproduct">
     <h1>{title}</h1>
     <h5> price : {price}</h5>
-    <p>{features.map((feature) =>  <li>{feature}</li>)}</p>
+    <p>{features.map((feature) => (
+    <li>{feature}</li>
+ ))}</p>
    
  </div>
 );
