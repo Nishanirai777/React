@@ -1,18 +1,21 @@
 
 import "./app.css";
 import Pproduct from "./Pproduct.jsx";
-import Messag from "./Messag.jsx";
+
 function App() {
-  let options =["hi-tech","durable","fast"];
-  //let options2= {a:"hi-tech",b:"durable",c:"fast"};
+  let styles={
+    display: "flex",
+    flexWrap:"wrap",
+    justifyContent:"center",
+   alignItems: "center"
+  };
   return (
-  <>
- <Messag useraNme = "nisha" textColor ="maroon" />
- <Messag useraNme= " Beautiful" textColor=" blue"/>
- <Pproduct title= " phone" price =" 40000"   />
- <Pproduct  title ="laptop" price="100000" />
- <Pproduct  title =" pen" price=" 100"/>
-  </>
+  <div style={styles}>
+ <Pproduct title="Logitech MX Master" idx={0}/>
+ <Pproduct title="Apple Pencil (2nd Gen)" idx={1}/>
+ <Pproduct title="Zebronics Zeb-Transformer" idx={2}/>
+ <Pproduct title="Petronics Toad 23" idx={3}/>
+  </div>
    
   ) ;
 }
