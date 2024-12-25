@@ -1,1 +1,67 @@
+import { useState } from "react";
 
+
+
+
+export default function Form() {
+
+
+
+    let [formData, setformData] = useState({
+        fullName: "",
+        username: "",
+        password:""
+
+    });
+    let handleInputChange = (event) => {
+        let fieldName = event.target.name;
+        let newValue = event.target.value;
+        console.log(newValue);
+        setformData((currData) => {
+           // currData[fieldName] = newValue;
+            return { ...currData, [fieldName]:newValue };
+        });
+    };
+    let handleSubmit = (event) => {
+        event.preventDefault();
+        console.log(formData);
+        setformData({
+          
+            password :"",
+            fullName: "",
+            username: ""
+        });
+    };
+
+    return (
+        <form onSubmit={handleSubmit}>
+            <label htmlFor="fullName">Full Name
+
+            </label>
+            <input placeholder="Enter the full Name.."
+                type="text"
+                value={formData.fullName}
+                onChange={handleInputChange}
+                id="fullName"
+                name="fullName" />
+
+            <br></br>
+            <br></br>
+            <label htmlFor="username">UserName</label>
+            <input type="text" placeholder="inter username" value={formData.username}
+                onChange={handleInputChange}
+                id="username"
+                name="username" />
+                 <br></br>
+            <br></br>
+            <label htmlFor="password">Password </label>
+            <input type="password" placeholder="inter password" value={formData.password}
+                onChange={handleInputChange}
+                id="password"
+                name="password" />
+
+
+            <button>Submit</button>
+        </form>
+    );
+}
